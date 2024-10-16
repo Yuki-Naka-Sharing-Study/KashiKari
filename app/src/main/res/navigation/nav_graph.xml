@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.kashikari.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_aite"
+            app:destination="@id/fragment_aite" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_setting"
+            app:destination="@id/fragment_setting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_aite"
+        android:name="com.example.kashikari.AiteFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_aite"
+        >
+        <action
+            android:id="@+id/action_fragment_aite_to_fragment_home"
+            app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_fragment_aite_to_fragment_setting"
+            app:destination="@id/fragment_setting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="com.example.kashikari.SettingFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_setting"
+        >
+        <action
+            android:id="@+id/action_fragment_setting_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+
+</navigation>
